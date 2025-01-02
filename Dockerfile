@@ -14,6 +14,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
+RUN npm audit fix --force
 RUN npm install
 
 # Copy the rest of the application files
